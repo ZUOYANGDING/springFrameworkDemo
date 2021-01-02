@@ -10,4 +10,5 @@ import java.lang.annotation.*;
 @Documented
 @MyComponent
 public @interface MyLazy {
+
 }
