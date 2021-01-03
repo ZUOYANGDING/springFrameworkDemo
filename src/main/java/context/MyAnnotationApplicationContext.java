@@ -1,11 +1,12 @@
 package context;
 
+import Registry.MyAnnotationConfigRegistry;
 import scanner.MyClassPathBeanDefinitionScanner;
 
-public class MyAnnotationApplicationContext extends MyAbstractApplicationContext{
+public class MyAnnotationApplicationContext extends MyAbstractApplicationContext implements MyAnnotationConfigRegistry {
     private final MyClassPathBeanDefinitionScanner myClassPathBeanDefinitionScanner;
 
-    public MyAnnotationApplicationContext(MyClassPathBeanDefinitionScanner myClassPathBeanDefinitionScanner) {
+    public MyAnnotationApplicationContext() {
         this.myClassPathBeanDefinitionScanner = new MyClassPathBeanDefinitionScanner(this);
     }
 

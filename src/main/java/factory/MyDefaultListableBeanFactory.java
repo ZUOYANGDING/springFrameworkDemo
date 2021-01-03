@@ -33,7 +33,7 @@ public class MyDefaultListableBeanFactory implements BeanFactory{
     /**
      * collection of bean's info data, from scanner's scanning result
      */
-    private final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>(128);
+    public final Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>(128);
 
     /**
      * store bean post processors
