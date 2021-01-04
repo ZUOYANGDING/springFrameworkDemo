@@ -83,7 +83,7 @@ public class MyDefaultListableBeanFactory implements BeanFactory{
 
     @Override
     public Object createBean(String beanName) {
-        return this.createBean(beanName);
+        return this.doCreateBean(beanName);
     }
 
     @Override

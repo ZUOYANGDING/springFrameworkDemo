@@ -115,7 +115,7 @@ public class MyClassPathBeanDefinitionScanner {
             try {
                 Class<?> packageClass = Class.forName(packageClassName);
                 Class<?> annotations = getAnnotations(packageClass);
-                if (Objects.isNull(annotations)) {
+                if (!Objects.isNull(annotations)) {
                     String beanName = "";
                     if (annotations.getTypeName().equals(MyComponent.class.getTypeName())
                             && StringUtils.isNotEmpty(packageClass.getAnnotation(MyComponent.class).name())) {
@@ -138,7 +138,7 @@ public class MyClassPathBeanDefinitionScanner {
                     if (packageClass.isAnnotationPresent(MyLazy.class)) {
                         candidates.add(new BeanDefinition(beanName, packageClass, packageClassName, isAbstract, true));
                     } else {
-                        candidates.add(new BeanDefinition(beanName, packageClass, packageClassName, isAbstract, false));
+                        candidates.add(new BeanDefinition(beanName, packageClass, packageClassName, isAbstract));
                     }
                     beanDefinitionName.add(beanName);
                 }

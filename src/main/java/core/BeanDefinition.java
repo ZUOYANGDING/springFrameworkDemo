@@ -1,8 +1,5 @@
 package core;
 
-import lombok.Data;
-
-@Data
 public class BeanDefinition {
     /**
      * Id of Bean
@@ -53,5 +50,53 @@ public class BeanDefinition {
         this.beanReferenceName = beanReferenceName;
         this.isAbstract = isAbstract;
         this.isLazy = isLazy;
+    }
+
+    public String getBeanName() {
+        return beanName;
+    }
+
+    public void setBeanName(String beanName) {
+        this.beanName = beanName;
+    }
+
+    public Class<?> getBeanClass() {
+        return beanClass;
+    }
+
+    public void setBeanClass(Class<?> beanClass) {
+        this.beanClass = beanClass;
+    }
+
+    public String getBeanReferenceName() {
+        return beanReferenceName;
+    }
+
+    public void setBeanReferenceName(String beanReferenceName) {
+        this.beanReferenceName = beanReferenceName;
+    }
+
+    public boolean isAbstract() {
+        return isAbstract;
+    }
+
+    public void setAbstract(boolean anAbstract) {
+        isAbstract = anAbstract;
+    }
+
+    public boolean isLazy() {
+        return isLazy;
+    }
+
+    public void setLazy(boolean lazy) {
+        isLazy = lazy;
+    }
+
+    public String getScope() {
+        return scope;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
     }
 }
